@@ -3,7 +3,9 @@
 /*Styling for body*/
 
 .indexBody {
-  width: 92%;
+  color: grey;
+  font-size: 4em;
+  width: 94%;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Open Sans', sans-serif;
@@ -12,7 +14,6 @@
 /*styling for header*/
 
 .indexHeader {
-  font-size: 4em;
   position: relative;
   text-align: center;
   padding-top: .8em;
@@ -23,8 +24,7 @@
 }
 
 .indexTitle {
-  font-size: 1.2em;
-  color: red;
+  color: #55DBBA;
   font-weight: bolder;
   letter-spacing: 1px;
   display: inline-block;
@@ -32,7 +32,81 @@
 
 .indexIconDiv {
   position: absolute;
-  top: 60px;
+  top: 55px;
   right: 20px;
   font-size: 1.2em;
+}
+
+/*styling for appointment search bar*/
+
+.searchAppts {
+  font-size: 1.2em;
+  width: 100%;
+  border: solid 1px grey;
+  /*padding-left: 5px;*/
+  color: grey;
+}
+
+/*styling for the containter around the search bar*/
+.searchContainer {
+  position: relative;
+  margin-top: 40px;
+  width: 94%;
+  margin-left: 3%;
+  margin-bottom: 140px;
+}
+
+/*styling for the icon in the search bar*/
+
+#searchIcon {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+
+/*styling for the appointment thumbnail container*/
+
+.apptThumbnail {
+  width: 94%;
+  margin-left: 3%;
+  background-color: lightGrey;
+}
+
+/*styling for the time/weather block in the thumbnail*/
+
+.appTimeWeather {
+  background-color: #55DBBA;
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  font-size: .8em;
+  font-weight: bolder;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /*border: solid 1px black;*/
+}
+
+/*styling for weather thumbnail icon*/
+
+.weatherIcon {
+  font-size: 1.5em;
+}
+
+/*Styling for the title/location block in the thumbnail*/
+
+.apptTitleLoc {
+  width: 74%;
+  display: inline-block;
+  font-size: .8em;
+  padding-left: 30px;
+  /*border: solid 1px black;*/
+}
+
+.apptTitle {
+  color: black;
+  padding-bottom: 8px;
+}
+
+.apptLoc {
+  font-size: .8em;
 }
