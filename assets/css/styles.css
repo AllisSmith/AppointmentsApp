@@ -1,0 +1,32 @@
+/*styling for Landing Page (index.html)*/
+
+/*Styling for body*/
+
+.indexBody {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*styling for header*/
+
+.indexHeader {
+  position: relative;
+  /*align-content: center;*/
+  text-align: center;
+  padding-top: 1em;
+  padding-right: .4em;
+  padding-left: .4em;
+  padding-bottom: .4em;
+  font-size: 4em;
+  border-bottom: solid 1px grey;
+}
+
+.indexTitle {
+  color: #00e68a;
+}
+
+.indexIconDiv {
+  position: absolute;
+}
