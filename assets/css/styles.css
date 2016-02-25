@@ -12,21 +12,27 @@
 /*styling for header*/
 
 .indexHeader {
+  font-size: 4em;
   position: relative;
-  /*align-content: center;*/
   text-align: center;
-  padding-top: 1em;
+  padding-top: .8em;
   padding-right: .4em;
   padding-left: .4em;
   padding-bottom: .4em;
-  font-size: 4em;
   border-bottom: solid 1px grey;
 }
 
 .indexTitle {
-  color: #00e68a;
+  font-size: 1.2em;
+  color: red;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  display: inline-block;
 }
 
 .indexIconDiv {
   position: absolute;
+  top: 60px;
+  right: 20px;
+  font-size: 1.2em;
 }
