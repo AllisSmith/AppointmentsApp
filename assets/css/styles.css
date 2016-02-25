@@ -43,6 +43,7 @@
   font-size: 1.2em;
   width: 100%;
   border: solid 1px grey;
+  border-radius: 1px;
   /*padding-left: 5px;*/
   color: grey;
 }
@@ -69,13 +70,15 @@
 .apptThumbnail {
   width: 94%;
   margin-left: 3%;
-  background-color: lightGrey;
+  background-color: #f0f0f5;
+  border-radius: 1px;
 }
 
 /*styling for the time/weather block in the thumbnail*/
 
 .appTimeWeather {
   background-color: #55DBBA;
+  color: white;
   width: 20%;
   display: inline-block;
   text-align: center;
@@ -104,9 +107,32 @@
 
 .apptTitle {
   color: black;
+  font-size: 1.2em;
+  font-weight: bolder;
   padding-bottom: 8px;
 }
 
 .apptLoc {
   font-size: .8em;
+  font-style: italic;
+}
+
+/*styling for line with date */
+
+.dateLine {
+  margin-top: 140px;
+  position: relative;
+  border: solid 1px grey;
+  width: 94%;
+  margin-left: 3%;
+}
+
+.dateLineDate {
+  position: absolute;
+  top: -35px;
+  right: 29%;
+  /*bottom: 0;
+  left: 0;*/
+  background: white;
+  padding: 0 5px 0 5px;
 }
