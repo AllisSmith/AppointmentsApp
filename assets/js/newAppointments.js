@@ -38,6 +38,13 @@ $(".save-modal").addClass("showing")
 
 });
 
+$(".delete").on("click", function() {
+
+  $(".delete").addClass("showing")
+
+});
+
+
 // when the modal is clicked upon, hide it again
 // $(".modal-ok").on("click", function(){
 //   $(".save-modal").removeClass("showing")
