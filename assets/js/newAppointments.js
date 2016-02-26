@@ -18,7 +18,14 @@
 
 
 // var appTitle = $("#title");
+
 var appTitle = document.querySelector("#title");
+var appStreet = document.querySelector("#street");
+var appCityState = document.querySelector("#city-state");
+var appDate = document.querySelector("#date");
+var appTime = document.querySelector("#time");
+var appNotes = document.querySelector("#notes");
+
 
 $(".save").on("click", function() {
 
@@ -27,16 +34,26 @@ $(".save").on("click", function() {
 
 var appointment1 = {};
 appointment1.title = appTitle.value;
+appointment1.street = appStreet.value;
+appointment1.cityState = appCityState.value;
+appointment1.date = appDate.value;
+appointment1.time = appTime.value;
+appointment1.notes = appNotes.value;
 
 // console.log("hello" + appointment1.title);
 
 localStorage.setItem( 'appointment1', JSON.stringify(appointment1) );
 var apptList = ( JSON.parse( localStorage.getItem( 'appointment1' ) ) );
-console.log(apptList.title);
+console.log(apptList);
 // appointment1.value = "";
 
+$(".save-modal").addClass("showing")
 
 });
+
+$(".modal-ok").on("click", function(){
+  $(".save-modal").removeClass("showing")
+})
 
 
 //

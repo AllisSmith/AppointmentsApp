@@ -25,7 +25,7 @@ header a {
   left:-.5em;
   top:0;
   padding-left:1em;
-  padding-right:1.2em;
+  padding-right:1.3em;
   padding-top:.75em;
   padding-bottom:.6em;
   text-decoration: none;
@@ -93,4 +93,61 @@ footer{
   background-color: #55DBBA;
   color:white;
   font-size:3.5em;
+}
+
+/*---------------------------------------------------MODAL*/
+
+.save-modal{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  width:100%;
+  display:none;
+}
+
+.showing{
+  display:block;
+}
+
+.modal-sub{
+  font-size:3em;
+  position:absolute;
+  bottom:12em;
+  left:25%;
+  width:50%;
+  margin:0 auto;
+  border:none red 5px;
+}
+
+.modal-saved{
+  color:grey;
+  font-size:3em;
+  background-color: white;
+  margin:0 auto;
+  padding:.5em;
+  margin-bottom:.5em;
+  border-radius:8px;
+  text-align: center;
+}
+
+.modal-saved i{
+  border:none red 5px;
+}
+
+.modal-saved h3{
+  font-size:.5em;
+  border:none red 5px;
+
+}
+
+.modal-ok{
+  color:white;
+  background-color: #55DBBA;
+  padding:1em;
+  border-radius:8px;
+  text-align: center;
 }

@@ -1,0 +1,49 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+header{
+  font-size:4em;
+  font-weight: 400;
+  border:none red thin;
+  padding-top:.75em;
+  padding-bottom:.6em;
+  position: fixed;
+  left:.5em;
+  text-align:center;
+  width:94%;
+  margin:0 auto;
+  color:grey;
+  border-bottom:solid lightgrey 4px;
+  background-color: white;
+}
+
+header a {
+  border:none red 5px;
+  position: absolute;
+  left:-.5em;
+  top:0;
+  padding-left:1em;
+  padding-right:1.3em;
+  padding-top:.75em;
+  padding-bottom:.6em;
+  text-decoration: none;
+  color:grey;
+}
+
+header i{
+}
+
+header h1{
+  display:inline-block;
+  border:none green thin;
+}
+
+/*-----------------------------------------------CONTAINER*/
+
+.container{
+  font-size:3em;
+  color:black;
+  padding-top:6.5em;
+}
