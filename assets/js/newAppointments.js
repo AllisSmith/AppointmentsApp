@@ -17,24 +17,26 @@
 //
 
 
-var appTitle = $("#title");
+// var appTitle = $("#title");
+var appTitle = document.querySelector("#title");
 
 $(".save").on("click", function() {
 
-  console.log(appTitle.value);
+  // console.log(appTitle.value);
 
-console.log("hello");
-console.log($(appTitle).value);
 
 var appointment1 = {};
 appointment1.title = appTitle.value;
-console.log(appointment1);
+
+// console.log("hello" + appointment1.title);
+
 localStorage.setItem( 'appointment1', JSON.stringify(appointment1) );
-var theCar = ( JSON.parse( localStorage.getItem( 'appointment1' ) ) );
-console.log(theCar);
+var apptList = ( JSON.parse( localStorage.getItem( 'appointment1' ) ) );
+console.log(apptList.title);
 // appointment1.value = "";
 
 });
+
 
 //
 //
