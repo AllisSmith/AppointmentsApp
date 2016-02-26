@@ -144,6 +144,10 @@ footer{
 
 }
 
+.save-modal a {
+  text-decoration: none;
+}
+
 .modal-ok{
   color:white;
   background-color: #55DBBA;
