@@ -1,4 +1,4 @@
-var apptList = ( JSON.parse( localStorage.getItem( 'appointment1' ) ) );
+var apptList = ( JSON.parse( localStorage.getItem( 'appt' ) ) );
 $(".title").html(apptList.title);
 $(".street").html(apptList.street);
 $(".city-state").html(apptList.cityState);

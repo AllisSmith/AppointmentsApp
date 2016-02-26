@@ -5,6 +5,8 @@ $(document).ready( function () {
 
 
 //this pulls in only the most recent appointment - currently, they all have key "appt"
+//we need to find a way to sort through localstorage and check for the appointments in there
+//and THEN determine the ones that I want to display
 var appointments = JSON.parse(localStorage.getItem( "appt" ));
 console.log(appointments);
 
@@ -12,7 +14,7 @@ console.log(appointments);
 
 //the section below populates data from the appointment object retrieved from localStorage
 
-  // for (var i=0; i<5; i++){
+  // for (var i=0; i<5; i++){ // I'll need to iterate through the list of appointments and display them
   // $(".apptThumbnail").append('<li class="repoTitle"><span class="octicon octicon-repo"></span>'+json[i].name+'</li><li class="description">'+json[i].description+'</li>');
   $(".apptTitle").html(appointments.title);
   // $(".street").html(apptList.street);

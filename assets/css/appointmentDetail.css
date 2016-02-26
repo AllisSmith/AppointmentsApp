@@ -1,6 +1,5 @@
 body{
   font-family: 'Open Sans', sans-serif;
-  text-align: center;
 }
 
 header{
@@ -42,8 +41,51 @@ header h1{
 
 /*-----------------------------------------------CONTAINER*/
 
-.container{
+.container {
   font-size:3em;
   color:black;
   padding-top:6.5em;
+  width: 76%;
+  margin-left: 12%;
+  /*border: solid 1px black;*/
+}
+
+.dateTime {
+  font-size: 1.6em;
+}
+
+.date {
+
+}
+
+.time {
+  color: #55DBBA;
+}
+
+.city-state {
+  font-style: italic;
+  font-size: 1.6em;
+  font-weight: lighter;
+  color: grey;
+  margin-top: 2em;
+}
+
+#mapIcon {
+  float: right;
+  color: #55DBBA;
+}
+
+.street {
+  margin-top: .2em;
+  font-size: .9em;
+}
+
+.mapPic {
+  width: 100%;
+  margin-top: 2em;
+  text-align: center;
+}
+
+iframe {
+  border: solid 4px lightgrey;
 }
