@@ -1,24 +1,6 @@
-// var car = {};
-// car.wheels = 4;
-// car.doors = 2;
-// car.sound = 'vroom';
-// car.name = 'Lightning McQueen';
-// console.log( car.wheels );
-// localStorage.setItem( 'car', JSON.stringify(car) );
-// var theCar = ( JSON.parse( localStorage.getItem( 'car' ) ) );
-// console.log(theCar.doors);
-//
-//
-// var fName = document.querySelector("#firstname");
-// var lName = document.querySelector("#lastname");
-// var email = document.querySelector("#email");
-// var country = document.querySelector("#country");
-// var biography = document.querySelector("#biography");
-//
+// this is the javascript for the New Appointments page
 
-
-// var appTitle = $("#title");
-
+// declare a bunch of variables to house the appointment details
 var appTitle = document.querySelector("#title");
 var appStreet = document.querySelector("#street");
 var appCityState = document.querySelector("#city-state");
@@ -26,38 +8,39 @@ var appDate = document.querySelector("#date");
 var appTime = document.querySelector("#time");
 var appNotes = document.querySelector("#notes");
 
-
+// when the 'save' button is clicked...
 $(".save").on("click", function() {
 
-  // console.log(appTitle.value);
+// apptCreated will be a unique timestamp value that we will append within the object
+var apptCreated = new Date();
+apptCreated = apptCreated.getTime();
 
+// Create an object for the new appointment
+var newAppt = {};
+newAppt.title = appTitle.value;
+newAppt.street = appStreet.value;
+newAppt.cityState = appCityState.value;
+newAppt.date = appDate.value;
+newAppt.time = appTime.value;
+newAppt.notes = appNotes.value;
+newAppt.apptId = apptCreated;
 
-var appointment1 = {};
-appointment1.title = appTitle.value;
-appointment1.street = appStreet.value;
-appointment1.cityState = appCityState.value;
-appointment1.date = appDate.value;
-appointment1.time = appTime.value;
-appointment1.notes = appNotes.value;
+//add the newAppt object to localStorage
+localStorage.setItem( "appt" , JSON.stringify(newAppt) );
 
-// console.log("hello" + appointment1.title);
+// var apptList = ( JSON.parse( localStorage.getItem( "appt" ) ) );
+// console.log(apptList);
 
-localStorage.setItem( 'appointment1', JSON.stringify(appointment1) );
-var apptList = ( JSON.parse( localStorage.getItem( 'appointment1' ) ) );
-console.log(apptList);
-// appointment1.value = "";
+// superObject.push(newAppt);
 
+// show the graphic modal after new appointment has been created
 $(".save-modal").addClass("showing")
 
 });
 
-$(".modal-ok").on("click", function(){
-  $(".save-modal").removeClass("showing")
-})
+// when the modal is clicked upon, hide it again
+// $(".modal-ok").on("click", function(){
+//   $(".save-modal").removeClass("showing")
+// })
 
-
-//
-//
-// localStorage.setItem( 'car', JSON.stringify(car) );
-// var theCar = ( JSON.parse( localStorage.getItem( 'car' ) ) );
-// console.log(theCar.doors);
+//when the modal is clicked, the user will be redirected to index.html
