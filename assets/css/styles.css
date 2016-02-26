@@ -74,6 +74,11 @@
   border-radius: 1px;
 }
 
+/*styling for the hidden apptID containter*/
+.apptId {
+  display: none;
+}
+
 /*styling for the time/weather block in the thumbnail*/
 
 .appTimeWeather {

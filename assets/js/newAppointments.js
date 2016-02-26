@@ -26,7 +26,7 @@ newAppt.notes = appNotes.value;
 newAppt.apptId = apptCreated;
 
 //add the newAppt object to localStorage
-localStorage.setItem( "appt" , JSON.stringify(newAppt) );
+localStorage.setItem( apptCreated , JSON.stringify(newAppt) );
 
 // var apptList = ( JSON.parse( localStorage.getItem( "appt" ) ) );
 // console.log(apptList);
