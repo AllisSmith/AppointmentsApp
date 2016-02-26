@@ -1,0 +1,153 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+header{
+  font-size:4em;
+  font-weight: 400;
+  border:none red thin;
+  padding-top:.75em;
+  padding-bottom:.6em;
+  position: fixed;
+  left:.5em;
+  text-align:center;
+  width:94%;
+  margin:0 auto;
+  color:grey;
+  border-bottom:solid lightgrey 4px;
+  background-color: white;
+}
+
+header a {
+  border:none red 5px;
+  position: absolute;
+  left:-.5em;
+  top:0;
+  padding-left:1em;
+  padding-right:1.3em;
+  padding-top:.75em;
+  padding-bottom:.6em;
+  text-decoration: none;
+  color:grey;
+}
+
+header i{
+}
+
+header h1{
+  display:inline-block;
+  border:none green thin;
+}
+
+.container{
+  padding-top:3em;
+  font-size:3.5em;
+  width: 85%;
+  margin:0 auto;
+}
+
+form{
+  padding-top:.5em;
+  border:none red thin;
+  border-bottom:solid lightgrey 3px;
+  width:98%;
+  margin:0 auto;
+}
+
+.container h3{
+  text-align: left;
+  font-weight: 300;
+  color:grey;
+  padding-bottom:.5em;
+}
+
+input{
+  width:100%;
+  margin:0 auto;
+  border:solid lightgrey 3px;
+  border-radius:8px;
+  font-size:1em;
+  padding: .2em .2em;
+  margin-bottom:.8em;
+  /*margin-bottom:.5em;*/
+
+}
+
+textarea{
+  width:100%;
+  height:300px;
+  font-size:1em;
+  margin-bottom:4em;
+  border:solid lightgrey 3px;
+  border-radius:8px;
+}
+
+footer{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:1.2em 0;
+  text-align: center;
+  background-color: #55DBBA;
+  color:white;
+  font-size:3.5em;
+}
+
+/*---------------------------------------------------MODAL*/
+
+.save-modal{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.5);
+  text-align: center;
+  width:100%;
+  display:none;
+}
+
+.showing{
+  display:block;
+}
+
+.modal-sub{
+  font-size:3em;
+  position:absolute;
+  bottom:12em;
+  left:25%;
+  width:50%;
+  margin:0 auto;
+  border:none red 5px;
+}
+
+.modal-saved{
+  color:grey;
+  font-size:3em;
+  background-color: white;
+  margin:0 auto;
+  padding:.5em;
+  margin-bottom:.5em;
+  border-radius:8px;
+  text-align: center;
+}
+
+.modal-saved i{
+  border:none red 5px;
+}
+
+.modal-saved h3{
+  font-size:.5em;
+  border:none red 5px;
+
+}
+
+.modal-ok{
+  color:white;
+  background-color: #55DBBA;
+  padding:1em;
+  border-radius:8px;
+  text-align: center;
+}

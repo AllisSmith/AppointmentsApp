@@ -3,14 +3,72 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic,300italic" rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <title>Irony Ard Appointments App New</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/newAppointment.css">
+
   </head>
   <body>
+
+    <header>
+      <a href="index.html">
+        <i class="fa fa-chevron-left"></i>
+      </a>
+      <h1>New Appointment</h1>
+    </header>
+
+    <div class="container">
+
+      <form class="title1">
+        <h3>Title</h3>
+        <input id="title" type="text" name="firstname">
+      </form>
+      <form class="location">
+        <h3>Street</h3>
+        <input id="street" type="text" name="lastname">
+        <h3>City, State</h3>
+        <input id="city-state" type="text" name="lastname"></i>
+      </form>
+      <form class="location">
+        <h3>Date</h3>
+        <input id="date" type="text" name="lastname">
+      </form>
+      <form class="location">
+        <h3>Time</h3>
+        <input id="time" type="text" name="lastname">
+      </form>
+      <form class="location">
+        <h3>Notes</h3>
+        <textarea id="notes" name="comment" form="usrform"></textarea>
+      </form>
+
+    </div>
+
+    <footer class="save">
+      Save
+    </footer>
+
+    <div class="save-modal">
+      <div class="modal-sub">
+        <div class="modal-saved">
+          <i class="fa fa-floppy-o"></i>
+          <h3>Saved</h3>
+        </div>
+        <div class="modal-ok">
+          ok
+        </div>
+      </div>
+    </div>
+
+
+
+
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.js"></script>
       <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
       <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-      <script src="assets/js/scripts.js"></script>
+      <script src="assets/js/newAppointments.js"></script>
   </body>
 </html>
