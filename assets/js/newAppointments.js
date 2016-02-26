@@ -35,6 +35,7 @@ var apptList = ( JSON.parse( localStorage.getItem( 'appointment1' ) ) );
 console.log(apptList.title);
 // appointment1.value = "";
 
+
 });
 
 
