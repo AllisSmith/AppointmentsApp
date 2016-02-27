@@ -28,8 +28,42 @@ newAppt.apptId = apptCreated;
 //add the newAppt object to localStorage
 localStorage.setItem( apptCreated , JSON.stringify(newAppt) );
 
-// var apptList = ( JSON.parse( localStorage.getItem( "appt" ) ) );
-// console.log(apptList);
+var apptList = ( JSON.parse( localStorage.getItem( apptCreated ) ) );
+console.log("the newly created appointment is ");
+console.log(apptList);
+
+// var appointmentsList = appointmentsList.push(apptList);
+// console.log("the new list of appointments is ");
+// console.log(appointmentsList);
+
+// The function below was fetched from http://stackoverflow.com/questions/20936466/cannot-push-objects-in-array-in-localstorage and modified
+
+//this function actually saves all new appointments in the array 'a'
+
+function SaveDataToLocalStorage(newAppointment) {
+    var a;
+    //is anything in localstorage?
+    if (localStorage.getItem('session') === null) {
+        a = [];
+    } else {
+         // Parse the serialized data back into an array of objects
+         a = JSON.parse(localStorage.getItem('session'));
+     }
+     // Push the new data (whether it be an object or anything else) onto the array
+     a.push(newAppointment);
+     // Alert the array value
+     alert(a);  // Should be something like [Object array]
+     // Re-serialize the array back into a string and store it in localStorage
+     localStorage.setItem('session', JSON.stringify(a));
+
+     console.log("the list of appointments looks like this:" );
+     console.log(a);
+}
+
+SaveDataToLocalStorage(apptList);
+
+
+
 
 // superObject.push(newAppt);
 
