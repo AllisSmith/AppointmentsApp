@@ -55,7 +55,7 @@ header h1{
 }
 
 .date {
-
+  color: grey;
 }
 
 .time {
@@ -88,4 +88,41 @@ header h1{
 
 iframe {
   border: solid 4px lightgrey;
+}
+
+.forecast {
+  margin-top: 2em;
+  background-color: #f0f0f5;
+  color: grey;
+  line-height: 2.5;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 2px;
+}
+
+.weatherDeets {
+  display: inline-block;
+  color: grey;
+  padding-left: .6em;
+  font-size: 1.5em;
+}
+
+.notes {
+  margin-top: 2em;
+  font-style: italic;
+  margin-bottom: 2em;
+}
+
+/*styling for edit appointment button*/
+
+footer{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:1.2em 0;
+  text-align: center;
+  background-color: #55DBBA;
+  color:white;
+  font-size:3.5em;
 }
