@@ -18,7 +18,7 @@ console.log(appointments);
   // $(".apptThumbnail").append('<li class="repoTitle"><span class="octicon octicon-repo"></span>'+json[i].name+'</li><li class="description">'+json[i].description+'</li>');
   $(".apptTitle").html(appointments.title);
   // $(".street").html(apptList.street);
-  $(".apptLoc").html(appointments.cityState);
+  $(".apptLoc").html("@" + appointments.cityState);
   // $(".date").html(apptList.date);
   $(".appTime").html(appointments.time);
   // $(".notes").html(apptList.notes);

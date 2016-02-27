@@ -65,6 +65,12 @@
   top: 16px;
 }
 
+/*Styling for the link containing the appt thumbnail*/
+
+.apptLink {
+  text-decoration: none;
+}
+
 /*styling for the appointment thumbnail container*/
 
 .apptThumbnail {
@@ -120,6 +126,7 @@
 .apptLoc {
   font-size: .8em;
   font-style: italic;
+  color: grey;
 }
 
 /*styling for line with date */
