@@ -37,6 +37,12 @@
   font-size: 1.2em;
 }
 
+/*Styling for link around add appointment icon in header*/
+
+.newApptLink {
+  text-decoration: none;
+}
+
 /*styling for appointment search bar*/
 
 .searchAppts {
