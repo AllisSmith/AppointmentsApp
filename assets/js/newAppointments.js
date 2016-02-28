@@ -15,7 +15,7 @@ $(".save").on("click", function() {
 var apptCreated = new Date();
 apptCreated = apptCreated.getTime();
 
-// Create an object for the new appointment
+// Create an object for the new appointment and add details from field inputs
 var newAppt = {};
 newAppt.title = appTitle.value;
 newAppt.street = appStreet.value;
@@ -25,12 +25,12 @@ newAppt.time = appTime.value;
 newAppt.notes = appNotes.value;
 newAppt.apptId = apptCreated;
 
-//add the newAppt object to localStorage
-localStorage.setItem( apptCreated , JSON.stringify(newAppt) );
-
-var apptList = ( JSON.parse( localStorage.getItem( apptCreated ) ) );
-console.log("the newly created appointment is ");
-console.log(apptList);
+//add the newAppt object to localStorage individually (instead of to a master object)
+// localStorage.setItem( apptCreated , JSON.stringify(newAppt) );
+//
+// var newAppt = ( JSON.parse( localStorage.getItem( apptCreated ) ) );
+// console.log("the newly created appointment is ");
+// console.log(newAppt);
 
 // var appointmentsList = appointmentsList.push(apptList);
 // console.log("the new list of appointments is ");
@@ -41,26 +41,29 @@ console.log(apptList);
 //this function actually saves all new appointments in the array 'a'
 
 function SaveDataToLocalStorage(newAppointment) {
-    var a;
+    var apptMasterList;
     //is anything in localstorage?
-    if (localStorage.getItem('session') === null) {
-        a = [];
+    if (localStorage.getItem('session') === null) {// if so
+        apptMasterList = [];//set our list of existing appointments to an empty array
     } else {
          // Parse the serialized data back into an array of objects
-         a = JSON.parse(localStorage.getItem('session'));
+         apptMasterList = JSON.parse(localStorage.getItem('session'));
      }
-     // Push the new data (whether it be an object or anything else) onto the array
-     a.push(newAppointment);
+     // Push the new appointment (the function's parameter) onto the array
+     apptMasterList.push(newAppointment);
      // Alert the array value
-     alert(a);  // Should be something like [Object array]
+    //  alert(apptMasterList);  // Should be something like [Object array]
      // Re-serialize the array back into a string and store it in localStorage
-     localStorage.setItem('session', JSON.stringify(a));
+     localStorage.setItem('session', JSON.stringify(apptMasterList));
 
-     console.log("the list of appointments looks like this:" );
-     console.log(a);
+     console.log("the current list of appointments looks like this:" );
+     console.log(apptMasterList);
 }
 
-SaveDataToLocalStorage(apptList);
+console.log("the appointment you just created looks like this:" );
+console.log(newAppt);
+SaveDataToLocalStorage(newAppt);//call the function and do the things is does
+
 
 
 
