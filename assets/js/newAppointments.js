@@ -38,13 +38,12 @@ newAppt.apptId = apptCreated;
 
 // The function below was fetched from http://stackoverflow.com/questions/20936466/cannot-push-objects-in-array-in-localstorage and modified
 
-//this function actually saves all new appointments in the array 'a'
-
 function SaveDataToLocalStorage(newAppointment) {
     var apptMasterList;
-    //is anything in localstorage?
+    //is there already a thing with key 'session' in localstorage?
     if (localStorage.getItem('session') === null) {// if so
         apptMasterList = [];//set our list of existing appointments to an empty array
+        console.log("session was null");
     } else {
          // Parse the serialized data back into an array of objects
          apptMasterList = JSON.parse(localStorage.getItem('session'));

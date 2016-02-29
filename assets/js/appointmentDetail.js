@@ -1,3 +1,6 @@
+$(document).ready( function () {
+  "use strict";
+
 // ------------------------------------------------------------------
 // the stuff at the top here checks to see what the current master list of appointments looks like
 
@@ -14,17 +17,6 @@ if (localStorage.getItem('session') === null) {// if so
  console.log(apptMasterList);
 
  // ------------------------------------------------------------------
-
- //this is the code for the weatherUnderground API call
-
- $.ajax({
-   url : "http://api.wunderground.com/api/cb4732b4c2fde8e1/geolookup/conditions/q/IA/Cedar_Rapids.json",
-   dataType : "jsonp",
-   success : function(parsed_json) {
-   var location = parsed_json['location']['city'];
-   var temp_f = parsed_json['current_observation']['temp_f'];
-   }
-   });
 
 
 //get the clicked app's ID from local storage
@@ -44,42 +36,103 @@ for (var i=0; i<apptMasterList.length; i++){
     $(".city-state").html(apptMasterList[i].cityState);
     $(".notes").html(apptMasterList[i].notes);
 
-    var cityStateArray = apptMasterList[i].cityState.split(" ");//create an array containing the associated city and state from the appointment in question THIS CAN BE MORE THAN TWO ELEMENTS LONG
+    //below is the code that molds the user-supplied city and state to fit the url for the API call
 
-    var state = cityStateArray.pop(); //the state name (abbreviation) is the last element of cityStateArray - this is also taking the state out of cityStateArray
+    var cityStateArray = apptMasterList[i].cityState.split(" ");//create an array containing the associated city and state from the appointment in question
 
-    //this doesn't quite work for cities with more than one name in them yet
+    var state = cityStateArray.pop(); //the state name (abbreviation) is the last element of cityStateArray. pop it out - this is also taking the state out of cityStateArray, leaving only the city
 
-    var city = cityStateArray[0].slice(0, -1); //chop the comma off the name of the city
-    if (city.split().length > 1){ //if the city is made up of more than one word...
-      city = city.split(' ').join('_');//replace the spaces with underscores
+
+    if (cityStateArray.length > 1){ //if the city is made up of more than one word...
+      var city = cityStateArray.join('_');//replace the spaces with underscores
     } else {
-      ; //do nothing
+      var city = cityStateArray[0];//turn the city into a string
     }
+    // console.log(city);
+
+    city = city.slice(0, -1);//chop the comma off of the end of the city name
 
     console.log(cityStateArray);
     console.log("City is " + city + " and state is " + state);
 
     //this is the code for the weatherUnderground API call
 
-    var weatherForecast = $.ajax({
-      url : 'http://api.wunderground.com/api/cb4732b4c2fde8e1/geolookup/conditions/q/'+state+'/'+city+'.json',
+    $.ajax({
       dataType : "jsonp",
-      success : function(parsed_json) {
-      var location = parsed_json['location']['city'];
-      var temp_f = parsed_json['current_observation']['temp_f'];
-      }
-      });
+      url : 'http://api.wunderground.com/api/cb4732b4c2fde8e1/conditions/q/'+state+'/'+city+'.json'
+    }).done(function (data) {
 
-    console.log("weatherForecast is this:");
-    console.log(weatherForecast);
+      // these variable declarations fail
+      // var weatherIcon = data.estimated
+      var weatherIcon = data['estimated']['icon_url'];
+      console.log(weatherIcon);
+      var tempC = data['estimated']['temp_c'];
+      console.log(tempC);
+      var conditions = data['estimated']['weather'];
+      console.log(conditions);
+    });
+
+      // yeah, this doesn't work
+      // $('#weatherIcon').append('<i id="weatherIcon" src="'+weatherIcon+'"></i>');
+      // $('.weatherDeets').html(conditions + ", " + tempC + "°C");
+
+
+
+
+
+
+      // $.getJSON( 'http://api.wunderground.com/api/cb4732b4c2fde8e1/conditions/q/'+state+'/'+city+'.json', function( json ) {
+      //
+      //   var weatherIcon = json.['estimated']['icon_url'];
+      //   var tempC = json.['estimated']['temp_c'];
+      //   var conditions = json.['estimated']['weather'];
+      //
+      //   console.log(weatherIcon);
+      //   console.log(tempC);
+      //   console.log(conditions);
+      //
+      //   $('#weatherIcon').append('<i id="weatherIcon" src="'+weatherIcon+'"></i>');
+      //   $('.weatherDeets').html(conditions + ", " + tempC + "°C");
+      //
+      // });
+        //  $(".octocatImage").append('<img src="'+json.avatar_url+'" alt="avatar"></img>');//these pull in various json key values for specific elements on the page
+        //  $(".name").html(json.name);
+        //  $(".username").html(json.login);
+        //  $(".org").html(json.company);
+        // //  $(".city").html(json.location);
+        //  $(".emailAddress").append('<a href="mailto:'+json.email+'">'+json.email+'</a>');
+        //  $(".blog").append('<a href='+json.html_url+'>'+json.html_url+'</a>');
+        //  $(".dateJoined").html(time);
+        //  $(".followers").html(json.followers);
+        //  $(".starred").html(json.starred);
+        //  $(".following").html(json.following);
+      // });
+
+      // $('#weatherIcon').append('<i id="weatherIcon" src="'+weatherIcon+'"></i>');
+      // $('.weatherDeets').html(conditions + ", " + tempC + "°C");
+
+
+      // $('#weatherIcon').html()
+      // $('.weatherDeets')
+
+    // console.log("weatherForecast is this:");
+    // console.log(weatherForecast);
+
+
+
+    // <div class="forecast">
+    //   <i id="weatherIcon" class="fa fa-mixcloud fa-2x"></i>
+    //   <div class="weatherDeets">Loud, 20°C</div>
+    // </div>
 
     // $('.weatherDeets').html(weatherForecast)
 
   } else {
-    console.log("this appointment exists, but it wasn't the one that was clicked");
-    console.log(apptMasterList[i].apptId);
-    console.log("and this is what it's being compared to");
-    console.log(clickedApptID);
+    // console.log("this appointment exists, but it wasn't the one that was clicked");
+    // console.log(apptMasterList[i].apptId);
+    // console.log("and this is what it's being compared to");
+    // console.log(clickedApptID);
   }
 }
+
+});
