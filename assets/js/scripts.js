@@ -5,7 +5,55 @@ $(".apptThumbnail").on("click", function(){
   console.log("clickedApptName is " + clickedApptName);
   console.log(clickedApptName);
 
-  
+var ironyArdApp = angular.module('ironyArdApp', ['ngRoute']);
+
+ironyArdApp.config(function($routeProvider) {
+        $routeProvider
+
+            // route for the home page
+            .when('/', {
+                templateUrl : 'partials/index.html',
+                controller  : 'indexCtrl'
+            })
+
+            // route for the about page
+            .when('/apptDetail', {
+                templateUrl : 'partials/appointmentDetail.html',
+                controller  : 'apptDetailsCtrl'
+            })
+
+            // route for the contact page
+            .when('/editAppt', {
+                templateUrl : 'pages/editAppointment.html',
+                controller  : 'editApptCtrl'
+            });
+
+            .when('/newAppt', {
+                templateUrl : 'pages/newAppointment.html',
+                controller  : 'newApptCtrl'
+            });
+    });
+
+
+ironyArdApp.controller('MainCtrl', function($scope){
+    $scope.thing = "hello! Are you there?";
+});
+
+ironyArdApp.controller('indexCtrl', function($scope){
+    $scope.thing = "hello! Are you there?";
+});
+
+ironyArdApp.controller('apptDetailsCtrl', function($scope){
+    $scope.thing = "hello! Are you there?";
+});
+
+ironyArdApp.controller('editApptCtrl', function($scope){
+    $scope.thing = "hello! Are you there?";
+});
+
+ironyArdApp.controller('newApptCtrl', function($scope){
+    $scope.thing = "hello! Are you there?";
+});
 
 // looking for <div class="apptTitle">Meet w/Ash</div>pt(".Apptname")
 
