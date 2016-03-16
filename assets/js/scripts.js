@@ -71,25 +71,29 @@ ironyArdApp.config(function($routeProvider) {
 
             // route for the home page
             .when('/', {
-                templateUrl : 'partials/index.html',
-                controller  : 'indexCtrl'
+                templateUrl : 'main.html',
+                // templateUrl : 'partials/index.html',
+                // controller  : 'indexCtrl'
             })
 
             // route for the about page
             .when('/apptDetail', {
-                templateUrl : 'partials/appointmentDetail.html',
-                controller  : 'apptDetailsCtrl'
+              templateUrl : 'appointmentDetail.html',
+                // templateUrl : 'partials/appointmentDetail.html',
+                // controller  : 'apptDetailsCtrl'
             })
 
             // route for the contact page
             .when('/editAppt', {
-                templateUrl : 'pages/editAppointment.html',
-                controller  : 'editApptCtrl'
+              templateUrl : 'editAppointment.html',
+                // templateUrl : 'pages/editAppointment.html',
+                // controller  : 'editApptCtrl'
             })
 
             .when('/newAppt', {
-                templateUrl : 'pages/newAppointment.html',
-                controller  : 'newApptCtrl'
+              templateUrl : 'newAppointment.html',
+                // templateUrl : 'pages/newAppointment.html',
+                // controller  : 'newApptCtrl'
             });
     });
 
