@@ -24,8 +24,8 @@ $(document).ready( function () {
 //this pulls in only the most recent appointment - currently, they all have key "appt"
 //we need to find a way to sort through localstorage and check for the appointments in there
 //and THEN determine the ones that I want to display
-var appointments = JSON.parse(localStorage.getItem( "appt" ));
-console.log(appointments);
+// var appointments = JSON.parse(localStorage.getItem( "appt" ));
+// console.log(appointments);
 
 // $.getJSON( appointments , function( json ) { //json for the contents under the toggling tabs
 

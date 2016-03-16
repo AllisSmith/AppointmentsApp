@@ -57,24 +57,15 @@ for (var i=0; i<apptMasterList.length; i++){
 
     //this is the code for the weatherUnderground API call
 
-    $.ajax({
-      dataType : "jsonp",
-      url : 'http://api.wunderground.com/api/cb4732b4c2fde8e1/conditions/q/'+state+'/'+city+'.json'
-    }).done(function (data) {
+    $.getJSON( 'http://api.wunderground.com/api/cb4732b4c2fde8e1/conditions/q/'+state+'/'+city+'.json', function (data) {
 
-      // these variable declarations fail
-      // var weatherIcon = data.estimated
-      var weatherIcon = data['estimated']['icon_url'];
-      console.log(weatherIcon);
-      var tempC = data['estimated']['temp_c'];
-      console.log(tempC);
-      var conditions = data['estimated']['weather'];
-      console.log(conditions);
+        // the icon doesn't quite work, but the weather and temp do!
+        $('#weatherIcon').append('<i id="weatherIcon" src="'+ data.current_observation.icon_url+'"></i>');
+        $('.weatherDeets').html(data.current_observation.weather + ", " + data.current_observation.temp_c + "°C");
+
     });
 
-      // yeah, this doesn't work
-      // $('#weatherIcon').append('<i id="weatherIcon" src="'+weatherIcon+'"></i>');
-      // $('.weatherDeets').html(conditions + ", " + tempC + "°C");
+
 
 
 
