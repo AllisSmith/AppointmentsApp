@@ -1,18 +1,25 @@
 <div ng-controller="apptDetailsCtrl">
-    <header>
-      <a href="#">
-        <i class="fa fa-chevron-left"></i>
-      </a>
-      <h1 class="title"></h1>
-    </header>
+  <header>
+    <a href="#">
+      <i class="fa fa-chevron-left"></i>
+    </a>
+    <h1 class="title"></h1>
+  </header>
 
-    <div class="container">
-      <h1 class="time"></h1>
-      <div class="title"></div>
-      <div class="street"></div>
-      <div class="city-state"></div>
-      <div class="date"></div>
-      <div class="time"></div>
-      <div class="notes"></div>
+  {{ thing }}
+
+  <div class="container">
+    <h1 class="dateTime"><span class="date"></span><span class="time"></span></h1>
+    <div class="city-state"><i id="mapIcon" class="fa fa-map-marker"></i></div>
+    <div class="street"></div>
+    <div  class="mapPic"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28861908.924598433!2d132.87285282959115!3d-27.988320244002423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1456520120984" width="600" height="450"></iframe></div>
+    <div class="forecast">
+      <i id="weatherIcon" class="fa fa-mixcloud fa-2x"></i>
+      <div class="weatherDeets">Loud, 20°C</div>
     </div>
+    <div class="notes"></div>
+  </div>
+  <a href="#editAppt.html" alt="edit this appointment">
+  <footer class="save">Edit Appointment</footer>
+  </a>
 </div>
