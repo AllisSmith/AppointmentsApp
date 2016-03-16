@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 var appTitle = document.querySelector("#title");
 var appStreet = document.querySelector("#street");
 var appCityState = document.querySelector("#city-state");
@@ -63,5 +65,8 @@ $(".save-modal").addClass("showing")
 $(".delete").on("click", function() {
 
   $(".delete").addClass("showing")
+
+});
+
 
 });

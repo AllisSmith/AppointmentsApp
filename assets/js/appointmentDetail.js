@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 var apptMasterList;
 //is anything in localstorage?
 if (localStorage.getItem('session') === null) {// if so
@@ -68,3 +70,5 @@ for (var i=0; i<apptMasterList.length; i++){
 
   }
 }
+
+});

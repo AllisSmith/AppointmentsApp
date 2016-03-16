@@ -1,5 +1,7 @@
 //the code below is going to get the name of the appointment we need to get the json of when we click on that appointment
 
+$( document ).ready(function() {
+
 var apptMasterList;
 //is anything in localstorage?
 if (localStorage.getItem('session') === null) {// if so
@@ -71,27 +73,27 @@ ironyArdApp.config(function($routeProvider) {
 
             // route for the home page
             .when('/', {
-                templateUrl : 'main.html',
-                // templateUrl : 'partials/index.html',
-                // controller  : 'indexCtrl'
+              templateUrl : 'index.html'
+              // templateUrl : 'partials/index.html',
+              // controller  : 'indexCtrl'
             })
 
             // route for the about page
             .when('/apptDetail', {
-              templateUrl : 'appointmentDetail.html',
+              templateUrl : 'appointmentDetail.html'
                 // templateUrl : 'partials/appointmentDetail.html',
                 // controller  : 'apptDetailsCtrl'
             })
 
             // route for the contact page
             .when('/editAppt', {
-              templateUrl : 'editAppointment.html',
+              templateUrl : 'editAppointment.html'
                 // templateUrl : 'pages/editAppointment.html',
                 // controller  : 'editApptCtrl'
             })
 
             .when('/newAppt', {
-              templateUrl : 'newAppointment.html',
+              templateUrl : 'newAppointment.html'
                 // templateUrl : 'pages/newAppointment.html',
                 // controller  : 'newApptCtrl'
             });
@@ -116,4 +118,6 @@ ironyArdApp.controller('editApptCtrl', function($scope){
 
 ironyArdApp.controller('newApptCtrl', function($scope){
     $scope.thing = "New Appointment! Are you there?";
+});
+
 });
