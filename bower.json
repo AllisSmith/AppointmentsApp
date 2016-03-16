@@ -1,0 +1,21 @@
+{
+  "name": "AppointmentsApp",
+  "homepage": "https://github.com/AllisSmith/AppointmentsApp",
+  "authors": [
+    "Jeremy Smith <smithjeremym@gmail.com>"
+  ],
+  "description": "",
+  "main": "main.html",
+  "moduleType": [],
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

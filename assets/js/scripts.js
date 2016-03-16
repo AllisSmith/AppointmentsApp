@@ -85,7 +85,7 @@ ironyArdApp.config(function($routeProvider) {
             .when('/editAppt', {
                 templateUrl : 'pages/editAppointment.html',
                 controller  : 'editApptCtrl'
-            });
+            })
 
             .when('/newAppt', {
                 templateUrl : 'pages/newAppointment.html',
@@ -94,26 +94,22 @@ ironyArdApp.config(function($routeProvider) {
     });
 
 
-ironyArdApp.controller('MainCtrl', function($scope){
-    $scope.thing = "hello! Are you there?";
-});
+// ironyArdApp.controller('MainCtrl', function($scope){
+//     $scope.thing = "hello! Are you there?";
+// });
 
 ironyArdApp.controller('indexCtrl', function($scope){
-    $scope.thing = "hello! Are you there?";
+    $scope.thing = "Index! Are you there?";
 });
 
 ironyArdApp.controller('apptDetailsCtrl', function($scope){
-    $scope.thing = "hello! Are you there?";
+    $scope.thing = "Appointment Details! Are you there?";
 });
 
 ironyArdApp.controller('editApptCtrl', function($scope){
-    $scope.thing = "hello! Are you there?";
+    $scope.thing = "Edit Appointment! Are you there?";
 });
 
 ironyArdApp.controller('newApptCtrl', function($scope){
-    $scope.thing = "hello! Are you there?";
-});
-
-// looking for <div class="apptTitle">Meet w/Ash</div>pt(".Apptname")
-
+    $scope.thing = "New Appointment! Are you there?";
 });

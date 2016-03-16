@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
     <meta charset="utf-8">
     <title>Irony Ard Appointments App</title>
     <link rel="stylesheet" href="assets/css/appointmentDetail.css">
@@ -15,6 +15,13 @@
   <body class="indexBody" ng-controller="MainCtrl">
       <div ng-view></div>
       {{ thing }}
+
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><i class="fa fa-home"></i> Index</a></li>
+          <li><a href="#apptDetail"><i class="fa fa-shield"></i> Appointment Details</a></li>
+          <li><a href="#editAppt"><i class="fa fa-comment"></i> Edit Appointment</a></li>
+          <li><a href="#newAppt"><i class="fa fa-modx"></i> New Appointment</a></li>
+      </ul>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.js"></script>
       <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
